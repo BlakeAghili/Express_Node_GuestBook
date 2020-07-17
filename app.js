@@ -35,7 +35,7 @@ app.post("/new-entry", function (request, response) {
     entries.push({
         title: request.body.title,
         body: request.body.body,
-        published: new Date()
+        published: new Date().toLocaleDateString()
     });
 
     response.redirect("/");
